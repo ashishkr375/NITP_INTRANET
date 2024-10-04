@@ -1,0 +1,31 @@
+{
+  "name": "nitp-intranet",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.6.3",
+    "@iconify/react": "^5.0.2",
+    "aos": "^2.3.4",
+    "axios": "^1.7.7",
+    "cookie": "^0.6.0",
+    "firebase": "^10.14.0",
+    "framer-motion": "^11.9.0",
+    "next": "^14.2.14",
+    "next-nprogress-bar": "^2.3.13",
+    "react": "^18.3.1",
+    "react-dom": "^18",
+    "react-icons": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.11",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "5.6.2"
+  }
+}
