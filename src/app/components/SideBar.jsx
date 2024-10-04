@@ -378,7 +378,7 @@ const SideBar = ({ children }) => {
           {/* Display username and email */}
           <AnimatePresence>
             {isOpen && (
-              <div className="user-info p-5 pt-[50vh] md:pt-[60vh]">
+              <div className="user-info p-5 pt-[50vh] md:pt-[50vh]">
                 <h2 className="text-sm text-red-300">{username}</h2>
                 <p className="text-sm">{email}</p>
               </div>
