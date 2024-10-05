@@ -260,7 +260,14 @@ const SideBar = ({ children }) => {
   const toggle = () => setIsOpen((prev) => !prev);
   const [username, setUsername] = useState('Guest');
   const [email, setEmail] = useState('No email provided');
-
+  const handleLogout = () => {
+    auth.signOut().then(() => {
+      document.cookie = cookie.serialize('auth', '', { maxAge: -1, path: '/' });
+      router.push('/Login'); // Redirect to login after logout
+    }).catch((error) => {
+      console.error('Error during logout:', error);
+    });
+  };
   useEffect(() => {
     const cookies = cookie.parse(document.cookie);
     setUsername(cookies.username || 'Guest');
@@ -378,9 +385,15 @@ const SideBar = ({ children }) => {
           {/* Display username and email */}
           <AnimatePresence>
             {isOpen && (
-              <div className="user-info p-5 pt-[50vh] md:pt-[50vh]">
+              <div className="user-info p-5 pt-[40vh] md:pt-[40vh]">
                 <h2 className="text-sm text-red-300">{username}</h2>
                 <p className="text-sm">{email}</p>
+                <button 
+          className="px-4 py-1 justify-center bg-red-500 text-sm text-white rounded-md hover:bg-red-600 transition duration-300" 
+          onClick={handleLogout}
+        >
+          Logout
+        </button>
               </div>
             )}
           </AnimatePresence>

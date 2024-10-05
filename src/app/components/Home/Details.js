@@ -94,7 +94,11 @@ const Details = () => {
       try {
         const eventsUrl = `https://admin.nitp.ac.in/api/events/active`;
         const response = await axios.get(eventsUrl);
-        setEvents(response.data);
+    
+        // Filter the events to include only those with type "intranet"
+        const filteredEvents = response.data.filter(event => event.type === 'intranet');
+    
+        setEvents(filteredEvents);
       } catch (e) {
         console.error("Error fetching events:", e);
       }
@@ -102,7 +106,7 @@ const Details = () => {
 
     const fetchNotices = async () => {
       try {
-        const noticesUrl = `https://admin.nitp.ac.in/api/notice/active`;
+        const noticesUrl = `https://admin.nitp.ac.in/api/notice/genralintranet`;
         const response = await axios.get(noticesUrl);
         const sortedNotices = response.data
           .filter(notice => notice.isVisible === 1)
@@ -115,7 +119,7 @@ const Details = () => {
 
     const fetchAcademics = async () => {
       try {
-        const academicsUrl = `https://admin.nitp.ac.in/api/notice/academics`;
+        const academicsUrl = `https://admin.nitp.ac.in/api/notice/academicintranet`;
         const response = await axios.get(academicsUrl);
         const sortedAcademics = response.data
           .filter(notice => notice.isVisible === 1)
