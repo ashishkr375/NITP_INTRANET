@@ -96,7 +96,7 @@ const CourseTable = ({ email }) => {
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="6" className="text-center py-2">No courses found.</td>
+                                <td colSpan="6" className="text-center py-2">No course Resources found.</td>
                             </tr>
                         )}
                     </tbody>
