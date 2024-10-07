@@ -5,6 +5,7 @@ import { useState ,useEffect} from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 import cookie from "cookie";
+import { auth } from '../firebase';
 import { 
   FaBars, FaMoneyBill ,
   FaHome, 
@@ -262,16 +263,26 @@ const SideBar = ({ children }) => {
   const [email, setEmail] = useState('No email provided');
   const handleLogout = () => {
     auth.signOut().then(() => {
+      // Clear localStorage
+      localStorage.removeItem('auth');
+      localStorage.removeItem('username');
+      localStorage.removeItem('email');
+      localStorage.removeItem('profilePic');
+  
+      // Clear the cookie (if you want to keep this)
       document.cookie = cookie.serialize('auth', '', { maxAge: -1, path: '/' });
-      router.push('/Login'); // Redirect to login after logout
+  
+      // Redirect to login after logout
+      router.push('/Login');
     }).catch((error) => {
       console.error('Error during logout:', error);
     });
   };
+  
   useEffect(() => {
     const cookies = cookie.parse(document.cookie);
-    setUsername(cookies.username || 'Guest');
-    setEmail(cookies.email || 'No email provided');
+    setUsername(localStorage.username || 'Guest');
+    setEmail(localStorage.email || 'No email provided');
   }, []);
 
   const inputAnimation = {

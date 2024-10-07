@@ -1,19 +1,35 @@
 'use client'; 
 import React from 'react';
-import { useRouter } from 'next/navigation';
-import cookie from 'cookie';
-import { useEffect } from 'react';
 
+import { useRouter } from 'next/navigation';
+import { useEffect,useState } from 'react';
+import { auth } from '../firebase';
 const FeeStructureTable = () => {
   const router = useRouter();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const cookies = cookie.parse(document.cookie);
-    
-    if (!cookies.auth) {
-      router.push('/Login');
-    }
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      // If user is null, redirect to login
+      if (!user) {
+        router.push('/Login');
+      } else {
+        // Optionally, check user email domain if needed
+        if (!user.email.endsWith('@nitp.ac.in')) {
+          auth.signOut();
+          router.push('/Login');
+        }
+      }
+      setLoading(false); // Set loading to false after the check
+    });
+
+    return () => unsubscribe(); // Clean up the listener
   }, [router]);
+
+  // Show loading state while checking auth
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   const data = [
     {
      Downloads: "Advance Form",
