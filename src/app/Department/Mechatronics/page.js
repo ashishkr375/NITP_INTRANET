@@ -87,14 +87,14 @@ export default function Humanities() {
         {/* Navigation Button  */}
 
         <div className="grid grid-cols-3 max-sm:grid-cols-2 mt-10 h-[20vh]">
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/Mechatronics/mission')}
             Title={'MISSION AND VISSION'}
           />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Mechatronics/faculty')}
             Title={'FACULTY'}
-          /> */}
+          />
           {/* <DepartmentNavigationButton
             onClick={() => router.push('/Department/Mechatronics/labs')}
             Title={'LABS'}

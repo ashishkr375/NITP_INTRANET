@@ -204,7 +204,7 @@ const Details = () => {
       <div className="section">
         <div className="section-header">
           <h2>Notice</h2>
-          <Link href="/Notices/All">View all</Link>
+          {/* <Link href="/Notices/All">View all</Link> */}
         </div>
         <div 
           className="section-content text-red-950"
@@ -251,7 +251,7 @@ const Details = () => {
         <div>
           <div className="section-header">
             <h2>Events</h2>
-            <Link href="/Notices/Events">View all</Link>
+            {/* <Link href="/Notices/Events">View all</Link> */}
           </div>
 
           <div className="section-content">
@@ -305,7 +305,7 @@ const Details = () => {
       <div className="section">
         <div className="section-header">
           <h2>Exams and Academic Notices </h2>
-          <Link href="/Notices/Academic">View all</Link>
+          {/* <Link href="/Notices/Academic">View all</Link> */}
         </div>
         <div 
           className="section-content text-red-950"

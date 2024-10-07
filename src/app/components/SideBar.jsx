@@ -5,7 +5,7 @@ import { useState ,useEffect} from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 import cookie from "cookie";
-import { auth } from '../firebase';
+// import { auth } from '../firebase';
 import { 
   FaBars, FaMoneyBill ,
   FaHome, 
@@ -190,7 +190,7 @@ const routes = [
     icon: <MdMessage />,
     subRoutes: [
       {
-        path: "/Students/Format",
+        path: "/Academic/Format",
         name: "Forms",
         icon: <FaUserGraduate />, // Icon for forms
       },
@@ -205,7 +205,7 @@ const routes = [
         icon: <FaChalkboardTeacher />, // Icon for academic portal
       },
       {
-        path: "https://docs.google.com/forms/d/e/1FAIpQLSf6",
+        path: "https://paydirect.eduqfix.com/app/mnYv9Q6+C+3lIMqghRCwdaqVZusPrJtq2RGJrJFnKnmtz3KBqtsEFPVrZFvoPubG/3466",
         name: "Fee Payment",
         icon: <FaMoneyBill />, // Icon for Fee Payment
       },
@@ -261,29 +261,29 @@ const SideBar = ({ children }) => {
   const toggle = () => setIsOpen((prev) => !prev);
   const [username, setUsername] = useState('Guest');
   const [email, setEmail] = useState('No email provided');
-  const handleLogout = () => {
-    auth.signOut().then(() => {
-      // Clear localStorage
-      localStorage.removeItem('auth');
-      localStorage.removeItem('username');
-      localStorage.removeItem('email');
-      localStorage.removeItem('profilePic');
+  // const handleLogout = () => {
+  //   auth.signOut().then(() => {
+  //     // Clear localStorage
+  //     localStorage.removeItem('auth');
+  //     localStorage.removeItem('username');
+  //     localStorage.removeItem('email');
+  //     localStorage.removeItem('profilePic');
   
-      // Clear the cookie (if you want to keep this)
-      document.cookie = cookie.serialize('auth', '', { maxAge: -1, path: '/' });
+  //     // Clear the cookie (if you want to keep this)
+  //     document.cookie = cookie.serialize('auth', '', { maxAge: -1, path: '/' });
   
-      // Redirect to login after logout
-      router.push('/Login');
-    }).catch((error) => {
-      console.error('Error during logout:', error);
-    });
-  };
+  //     // Redirect to login after logout
+  //     router.push('/Login');
+  //   }).catch((error) => {
+  //     console.error('Error during logout:', error);
+  //   });
+  // };
   
-  useEffect(() => {
-    const cookies = cookie.parse(document.cookie);
-    setUsername(localStorage.username || 'Guest');
-    setEmail(localStorage.email || 'No email provided');
-  }, []);
+  // useEffect(() => {
+  //   const cookies = cookie.parse(document.cookie);
+  //   setUsername(localStorage.username || 'Guest');
+  //   setEmail(localStorage.email || 'No email provided');
+  // }, []);
 
   const inputAnimation = {
     hidden: {
@@ -394,7 +394,7 @@ const SideBar = ({ children }) => {
           </section>
 
           {/* Display username and email */}
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {isOpen && (
               <div className="user-info p-5 pt-[40vh] md:pt-[40vh]">
                 <h2 className="text-sm text-red-300">{username}</h2>
@@ -407,7 +407,7 @@ const SideBar = ({ children }) => {
         </button>
               </div>
             )}
-          </AnimatePresence>
+          </AnimatePresence> */}
         </motion.div>
 
         <main>{children}</main>

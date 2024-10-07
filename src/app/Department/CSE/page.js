@@ -35,9 +35,9 @@ export default function CSE() {
     },[it])
 
     return (
-      <div className="p-10 max-sm:px-0  text-black bg-[url('https://i.postimg.cc/2jnZjfrL/6359670-3258484-removebg-preview.png')] bg-cover bg-center">
+      <div className="py-3 px-10 max-sm:px-0  text-black bg-[url('https://i.postimg.cc/2jnZjfrL/6359670-3258484-removebg-preview.png')] bg-cover bg-center">
         {/* heading */}
-        <div className="text-3xl max-sm:text-2xl max-sm:ml-2 font-bold text-red-900 mb-3 text-center bg-transparent">
+        <div className="text-3xl max-sm:text-lg max-sm:ml-2 font-bold text-red-900  text-center bg-transparent">
           COMPUTER SCIENCE AND ENGINEERING
         </div>
         <div>
@@ -46,23 +46,23 @@ export default function CSE() {
         {/* Section one */}
         <div className="grid grid-cols-6 max-md:grid-cols-1">
           {/* Department Picture */}
-          <div className="flex flex-col py-10 col-span-3 mr-4 max-sm:mr-0">
+          <div className="flex flex-col py-0 md:py-5 col-span-3 mr-4 max-sm:mr-0">
             <Image
               src={`${feature}`}
-              className="h-[420px] rounded-lg max-sm:rounded-none shadow-lg "
+              className="h-[200px] md:h-[420px] rounded-lg max-sm:rounded-none shadow-lg "
               alt="Logo"
               width={700}
               height={1000}
             />
             <div className="flex justify-center relative top-[-40px] space-x-1">
-              <button onClick={()=>{setIt(0)}} className={`h-[18px] w-[18px] border ${(it == 0)?"bg-black":"bg-slate-400"} rounded-full`}></button>
-              <button onClick={()=>{setIt(1)}} className={`h-[18px] w-[18px] border ${(it == 1)?"bg-black":"bg-slate-400"} rounded-full`}></button>
-              <button onClick={()=>{setIt(2)}} className={`h-[18px] w-[18px] border ${(it == 2)?"bg-black":"bg-slate-400"} rounded-full`}></button>
+              <button onClick={()=>{setIt(0)}} className={`h-[8px] w-[8px] md:h-[18px] md:w-[18px] border ${(it == 0)?"bg-black":"bg-slate-400"} rounded-full`}></button>
+              <button onClick={()=>{setIt(1)}} className={`h-[8px] w-[8px] md:h-[18px] md:w-[18px] border ${(it == 1)?"bg-black":"bg-slate-400"} rounded-full`}></button>
+              <button onClick={()=>{setIt(2)}} className={`h-[8px] w-[8px] md:h-[18px] md:w-[18px] border ${(it == 2)?"bg-black":"bg-slate-400"} rounded-full`}></button>
             </div>
           </div>
          
           {/* Notice  */}
-          <div className=" py-10  col-span-3 max-lg:col-span-3 flex flex-col max-md:mb-10 ">
+          <div className=" py-0 md:py-5  col-span-3 max-lg:col-span-3 flex flex-col max-md:mb-10 ">
             <div className="bg-white rounded-lg shadow-lg  px-4 h-[420px] overflow-y-auto border border-red-200">
               <div className="flex justify-between mb-4 text-lg font-semibold text-slate-500">
                 <div>Announcement</div>
@@ -117,14 +117,14 @@ export default function CSE() {
           </div>
           {/* Navigation Button  */}
           <div className="grid grid-cols-3 max-sm:grid-cols-2 mt-10">
-            {/* <DepartmentNavigationButton
+            <DepartmentNavigationButton
               onClick={() => router.push('/Department/CSE/mission')}
               Title={'MISSION AND VISSION'}
             />
               <DepartmentNavigationButton
                 onClick={() => router.push('/Department/CSE/faculty')}
                 Title={'FACULTY'}
-              /> */}
+              />
             <DepartmentNavigationButton
               onClick={() => router.push('/Department/CSE/syllabus')}
               Title={'SYLLABUS'}
@@ -133,19 +133,19 @@ export default function CSE() {
                 onClick={() => router.push('/Department/CSE/timeTable')}
                 Title={'TIME TABLE'}
               />
-            {/* <DepartmentNavigationButton
+            <DepartmentNavigationButton
               onClick={() => router.push('/Department/CSE/labs')}
               Title={'LABS'}
-            /> */}
+            />
             <DepartmentNavigationButton
               onClick={() => router.push('/Department/CSE/activities')}
               Title={'ACTIVITIES'}
             />
             
-            {/* <DepartmentNavigationButton
+            <DepartmentNavigationButton
               onClick={() => router.push('/Department/CSE/achivments')}
               Title={'ACHIEVEMENTS'}
-            /> */}
+            />
           </div>
         </div>
       </div>

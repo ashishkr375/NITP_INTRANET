@@ -88,14 +88,14 @@ export default function ME() {
         </div>
         {/* Navigation Button  */}
         <div className="grid grid-cols-3 max-sm:grid-cols-2 mt-10">
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/Phy/mission')}
             Title={'MISSION AND VISSION'}
           />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Phy/faculty')}
             Title={'FACULTY'}
-          /> */}
+          />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Phy/syllabus')}
             Title={'SYLLABUS'}
@@ -104,24 +104,24 @@ export default function ME() {
             onClick={() => router.push('/Department/Phy/timeTable')}
             Title={'TIME TABLE'}
           />
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/Phy/lab')}
             Title={'LABS'}
-          /> */}
+          />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Phy/activities')}
             Title={'ACTIVITIES'}
           />
 
 
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/Phy/achievements')}
             Title={'ACHIEVEMENTS'}
           />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Phy/research')}
             Title={'Research Highlights'}
-          /> */}
+          />
         </div>
       </div>
     </div>

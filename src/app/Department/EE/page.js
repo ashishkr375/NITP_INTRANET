@@ -90,14 +90,14 @@ export default function EE() {
         </div>
         {/* Navigation Button  */}
         <div className="grid grid-cols-3 max-sm:grid-cols-2 mt-10">
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/EE/mission')}
             Title={'MISSION AND VISSION'}
           />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/EE/faculty')}
             Title={'People'}
-          /> */}
+          />
             <DepartmentNavigationButton
               onClick={() => router.push('/Department/EE/syllabus')}
               Title={'SYLLABUS'}
@@ -106,22 +106,22 @@ export default function EE() {
               onClick={() => router.push('/Department/EE/syllabus')}
               Title={'Time Table'}
             />
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/EE/labs')}
             Title={'LABS'}
-          /> */}
+          />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/EE/activities')}
             Title={'ACTIVITIES'}
           />
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/EE/achivments')}
             Title={'ACHIEVEMENTS'}
           />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/EE/research')}
             Title={'RESEARCH HIGHLIGHT'}
-          /> */}
+          />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/EE/usefullLinks')}
             Title={'USEFULL LINKS'}

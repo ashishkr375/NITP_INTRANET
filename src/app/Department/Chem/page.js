@@ -7,6 +7,14 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const Notices = [
+  {
+    id: 1,
+    notice: "No any notice for now",
+    link: ""
+  },
+
+]
 
 export default function Chem() {
   const router = useRouter();
@@ -96,7 +104,7 @@ export default function Chem() {
         </div>
         {/* Navigation Button  */}
         <div className="grid grid-cols-3 max-sm:grid-cols-2 mt-10">
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/Chem/mission')}
             Title={'MISSION AND VISSION'}
           />
@@ -104,7 +112,7 @@ export default function Chem() {
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Chem/faculty')}
             Title={'FACULTY'}
-          /> */}
+          />
 
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Chem/syllabus')}
@@ -116,17 +124,17 @@ export default function Chem() {
             Title={'TIME TABLE'}
           />
 
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/Chem/labs')}
             Title={'LABS'}
-          /> */}
+          />
 
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Chem/activities')}
             Title={'ACTIVITIES'}
           />
 
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/Chem/achivments')}
             Title={'ACHIEVEMENTS'}
           />
@@ -134,7 +142,7 @@ export default function Chem() {
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Chem/more')}
             Title={'MORE INFO'}
-          /> */}
+          />
 
         </div>
       </div>

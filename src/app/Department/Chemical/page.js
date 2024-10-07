@@ -89,10 +89,10 @@ export default function Page() {
             onClick={() => router.push('/Department/Chemical/mission')}
             Title={'MISSION AND VISSION'}
           />
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/Chemical/faculty')}
             Title={'FACULTY'}
-          /> */}
+          />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Chemical/syllabus')}
             Title={'SYLLABUS'}

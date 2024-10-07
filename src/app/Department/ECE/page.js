@@ -96,7 +96,7 @@ export default function ECE() {
         </div>
         {/* Navigation Button  */}
         <div className="grid grid-cols-3 max-sm:grid-cols-2 mt-10">
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/ECE/mission')}
             Title={'MISSION AND VISSION'}
           />
@@ -104,7 +104,7 @@ export default function ECE() {
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/ECE/faculty')}
             Title={'FACULTY'}
-          /> */}
+          />
 
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/ECE/syllabus')}
@@ -116,20 +116,20 @@ export default function ECE() {
             Title={'TIME TABLE'}
           />
 
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/ECE/labs')}
             Title={'LABS'}
-          />*/}
+          />
 
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/ECE/activities')}
             Title={'ACTIVITIES'}
-          /> 
+          />
 
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/ECE/achivments')}
             Title={'ACHIEVEMENTS'}
-          /> */}
+          />
 
         </div>
       </div>

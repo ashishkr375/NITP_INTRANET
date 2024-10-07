@@ -98,7 +98,7 @@ export default function CE() {
         </div>
         {/* Navigation Button  */}
         <div className="grid grid-cols-3 max-sm:grid-cols-2 mt-10">
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/CE/mission')}
             Title={'MISSION AND VISSION'}
           />
@@ -106,7 +106,7 @@ export default function CE() {
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/CE/faculty')}
             Title={'FACULTY'}
-          /> */}
+          />
 
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/CE/syllabus')}
@@ -117,20 +117,20 @@ export default function CE() {
             Title={'TIME TABLE'}
           />
 
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/CE/labs')}
             Title={'LABS'}
-          /> */}
+          />
 
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/CE/activities')}
             Title={'ACTIVITIES'}
           />
 
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/CE/achivments')}
             Title={'ACHIEVEMENTS'}
-          /> */}
+          />
 
         </div>
       </div>

@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import SideBar from "./components/SideBar";
-
+import Footer from "../app/components/Footer"
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -25,9 +25,13 @@ export default function RootLayout({ children }) {
         <div className="flex min-h-screen">
           <SideBar />
           <main className="flex-1 overflow-y-auto ml-9 ">
-            {children}
+            <div className="min-h-[92.5vh]">
+            {children}</div>
+            <Footer/>
           </main>
+          
         </div>
+        
       </body>
     </html>
   );

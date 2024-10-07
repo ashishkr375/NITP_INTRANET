@@ -7,6 +7,50 @@ import Image from 'next/image'
 import {useRouter} from 'next/navigation';
 import { useEffect, useState } from "react";
 
+// const Notices = [
+//   {
+//     id: 1,
+//     notice: 'Master Time-Table July-Dec.2023',
+//     link: 'https://drive.google.com/file/d/15MN9uSLnkBhyibh4BjxZ7nDun97LrO5v/a',
+//   },
+//   {
+//     id: 2,
+//     notice: 'Communicative English Lab Viva-Vove Schedule (UG & DD.1st Semester) July-Dec 2022',
+//     link: 'https://drive.google.com/file/d/1a9GhlTCxBzWOpvHqLfLjyAWk4_Bw30d2/view',
+//   },
+//   {
+//     id: 3,
+//     notice: 'UG_6th & M.SC 8th Sem OPEN Elective Time-Table_HSS Dept (Jan-June 2023)',
+//     link: 'https://drive.google.com/file/d/1BzW9dupGBPKRVQ6iWvISY8kUgb7U0WLQ/view',
+//   },
+//   {
+//     id: 4,
+//     notice: 'MTech-PhD Time Table_HSS Dept ( JAN -JUNE 2023)',
+//     link: 'https://drive.google.com/file/d/1lgdJlHUIJKrPqxgC2sTS0lJ3m6RqpCXD/view',
+//   },
+//   {
+//     id: 5,
+//     notice: 'Schedule of Comprehensive Viva of Saraswati Keshri, Roll no 215HS008',
+//     link: 'https://drive.google.com/file/d/1bSsERrTDGUKNJqOk9an116lEEqTDyH0d/view',
+//   },
+//   {
+//     id: 6,
+//     notice: 'Schedule of Comprehensive Viva of Sneha Das, Roll no 215HS002',
+//     link: 'https://drive.google.com/file/d/1UNVjS2cHEJeEtBNyxGULjO-EDiDa-bCe/view',
+//   },
+
+//   {
+//     id: 7,
+//     notice: 'Schedule of Open Viva-Voce Examination of Maryam Sabreen, Roll no. 165HS01',
+//     link: 'https://drive.google.com/file/d/1AObYsaKVMew-ZnqWSZ1y4qYbxz1TTOd6/view',
+//   },
+//   {
+//     id: 8,
+//     notice: 'Schedule of End Sem Viva-Voce Examination for UG (AR, CSE, ECE) 2nd Semester.',
+//     link: 'https://drive.google.com/file/d/1KfJqDtLwCvyRgz0SI-tV1mxW44EyUc7y/view',
+//   },
+// ]
+
 export default function Humanities() {
   const router = useRouter()
   const [Notices, setNotices] = useState([]);
@@ -82,7 +126,7 @@ export default function Humanities() {
         {/* Navigation Button  */}
         <div className="grid grid-cols-3 max-sm:grid-cols-2 mt-10">
 
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/Humanities/mission')}
             Title={'MISSION AND VISSION'}
           />
@@ -93,7 +137,7 @@ export default function Humanities() {
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Humanities/faculty')}
             Title={'People'}
-          /> */}
+          />
 
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Humanities/syllabus')}
@@ -104,29 +148,29 @@ export default function Humanities() {
             onClick={() => router.push('/Department/Humanities/time-table')}
             Title={'Time Table'}
           />
-{/* 
+
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Humanities/labs')}
             Title={'LABS'}
-          /> */}
-{/* 
+          />
+
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Humanities/research')}
             Title={'Reaserch Highlights'}
-          /> */}
+          />
 
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Humanities/activities')}
             Title={'ACTIVITIES'}
           />
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/Humanities/achivements')}
             Title={'ACHIVEMENTS'}
           />
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/Humanities/moreInfo')}
             Title={'MORE INFO'}
-          /> */}
+          />
 
         </div>
       </div>

@@ -89,7 +89,7 @@ export default function ME() {
         </div>
         {/* Navigation Button  */}
         <div className="grid grid-cols-3 max-sm:grid-cols-2 mt-10">
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/ME/mission')}
             Title={'MISSION AND VISSION'}
           />
@@ -97,7 +97,7 @@ export default function ME() {
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/ME/faculty')}
             Title={'FACULTY'}
-          /> */}
+          />
 
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/ME/syllabus')}
@@ -114,13 +114,13 @@ export default function ME() {
             Title={'LABS'}
           />
 
-          {/* <DepartmentNavigationButton
+          <DepartmentNavigationButton
             onClick={() => router.push('/Department/ME/activities')}
             Title={'ACTIVITIES'}
-          /> */}
+          />
 
           
-{/* 
+
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/ME/achivments')}
             Title={'ACHIVEMENTS'}
@@ -132,7 +132,7 @@ export default function ME() {
           <DepartmentNavigationButton
             onClick={() => router.push('/Department/ME/staff')}
             Title={'STAFF'}
-          /> */}
+          />
         </div>
       </div>
     </div>
